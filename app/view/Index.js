@@ -25,7 +25,7 @@ export default class Woods extends Component {
                     Shake or press menu button for dev menu
                 </Text>
                 <Text style={styles.instructions}>
-                    Thanks all!
+                    Thanks all !
                 </Text>
             </View>
         );
