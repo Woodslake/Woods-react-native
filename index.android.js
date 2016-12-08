@@ -10,6 +10,6 @@ import {
     AppRegistry
 } from 'react-native';
 
-import Index from './app/view/Index';
+import HelloWorld from './app/view/HelloWorld';
 
-AppRegistry.registerComponent('index', () => Index);
+AppRegistry.registerComponent('index', () => HelloWorld);
