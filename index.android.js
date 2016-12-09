@@ -10,6 +10,6 @@ import {
     AppRegistry
 } from 'react-native';
 
-import Blink from './app/view/Blink';
+import Index from './app/view/LotsOfStyles';
 
-AppRegistry.registerComponent('index', () => Blink);
+AppRegistry.registerComponent('index', () => Index);
