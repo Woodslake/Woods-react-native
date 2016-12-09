@@ -10,6 +10,6 @@ import {
     AppRegistry
 } from 'react-native';
 
-import HelloWorld from './app/view/HelloWorld';
+import Blink from './app/view/Blink';
 
-AppRegistry.registerComponent('index', () => HelloWorld);
+AppRegistry.registerComponent('index', () => Blink);
