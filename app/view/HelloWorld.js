@@ -4,12 +4,11 @@
 
 import React, { Component } from 'react';
 import {
-    AppRegistry,
     Text,
     View
 } from 'react-native';
 
-export default class Woods extends Component{
+export  default  class HelloWorld extends Component{
 
     render(){
         return (
@@ -20,5 +19,3 @@ export default class Woods extends Component{
     }
 
 }
-
-AppRegistry.registerComponent('Woods', () => Woods);

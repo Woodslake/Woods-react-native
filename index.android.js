@@ -10,6 +10,6 @@ import {
     AppRegistry
 } from 'react-native';
 
-import Index from './app/view/LotsOfStyles';
+import Index from './app/view/App';
 
 AppRegistry.registerComponent('index', () => Index);

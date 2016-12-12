@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
-class Blink extends Component {
+class Blinker extends Component {
     constructor(props) {
         super(props);
         this.state = { showText: true };
@@ -23,17 +23,15 @@ class Blink extends Component {
     }
 }
 
-export  default class Woods extends Component {
+export  default class Blink extends Component {
     render(){
         return (
             <View>
-                <Blink text='I love to Blink'/>
-                <Blink text='Yes blinking is so great' />
-                <Blink text='Why did they ever take this out of HTML' />
-                <Blink text='Look at me look at me look at me' />
+                <Blinker text='I love to Blink'/>
+                <Blinker text='Yes blinking is so great' />
+                <Blinker text='Why did they ever take this out of HTML' />
+                <Blinker text='Look at me look at me look at me' />
             </View>
         );
     }
 }
-
-AppRegistry.registerComponent('Woods', () => Woods);

@@ -3,9 +3,9 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, Image, View, Text } from 'react-native';
+import { Image, View, Text } from 'react-native';
 
-export default class Woods extends Component {
+export default class Bananas extends Component {
     render(){
         let pic = {
             uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
@@ -18,5 +18,3 @@ export default class Woods extends Component {
         );
     }
 }
-
-AppRegistry.registerComponent('Woods', () => Woods);

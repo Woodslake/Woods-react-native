@@ -3,9 +3,9 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default class Woods extends Component {
+export default class LotsOfStyles extends Component {
     render(){
         return(
             <View>
@@ -28,5 +28,3 @@ const styles = StyleSheet.create({
         color: 'red',
     },
 });
-
-AppRegistry.registerComponent('Woods', () => Woods);
