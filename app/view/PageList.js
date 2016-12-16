@@ -21,6 +21,7 @@ import FixedDimensionBasics from './FixedDimensionBasics'
 import FlexDirectionBasics from './FlexDirectionBasics'
 import JustifyContentBasics from './JustifyContentBasics'
 import PizzaTranslator from './PizzaTranslator'
+import Login from './Login'
 
 export  default  class PageList extends Component {
 
@@ -98,6 +99,14 @@ export  default  class PageList extends Component {
                     },
                     type: type
                 })
+            }else if(name == 'Login'){
+                navigator.push({
+                    component:Login,
+                    passProps: {
+                        name: name
+                    },
+                    type: type
+                })
             }
         }
     }
@@ -128,6 +137,9 @@ export  default  class PageList extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>this._onPress('TextInput')}>
                     <Text style={styles.text}>TextInput</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>this._onPress('Login')}>
+                    <Text style={styles.text}>Login</Text>
                 </TouchableOpacity>
             </View>
         );
