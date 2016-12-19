@@ -18,12 +18,53 @@ class Login extends Component {
         super(props);
     }
 
-    login(name, type = 'Normal'){
+    login(){
+        fetch('https://escrow.tourongjia.com/Mobile2/Auth/login?account=15000000015&password=m123456&deviceid=15000000011', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            // body: JSON.stringify({
+            //     account: '15000000011',
+            //     password: 'm123456',
+            //     deviceid: '15000000011'
+            // })
+            // body: 'account=15000000011&password=m123456&deviceid=15000000011'
+        }).then((response)=> response.json())
+            .then((responseJson)=> {
+                if(responseJson.boolean == 1){
+                    alert(responseJson)
+                }else {
+                    alert(responseJson.message)
+                }
+            }).catch((error)=> {
+                console.error(error);
+            });
 
     }
 
     register(){
-
+        fetch('https://api.github.com/users/Woodslake/repos', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            // body: JSON.stringify({
+            //     account: '15000000011',
+            //     password: 'm123456',
+            //     deviceid: '15000000011'
+            // })
+            // body: 'account=15000000011&password=m123456&deviceid=15000000011'
+        }).then((response)=> response.json())
+            .then((responseJson)=> {
+                if(responseJson){
+                    alert(responseJson[0].id)
+                }
+            }).catch((error)=> {
+            console.error(error);
+        });
     }
 
     forget(){
@@ -54,7 +95,7 @@ class Login extends Component {
                             <Text style={{color: 'orange'}}>忘记密码</Text>
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity style={styles.btn}>
+                    <TouchableOpacity style={styles.btn} onPress={()=>this.login()}>
                         <Text style={[{color: 'white'}, {fontSize: 20}, {textAlign: 'center'}]}>登录</Text>
                     </TouchableOpacity>
                 </Image>
