@@ -19,7 +19,21 @@ class Login extends Component {
     }
 
     login(){
-        fetch('https://escrow.tourongjia.com/Mobile2/Auth/login?account=15000000015&password=m123456&deviceid=15000000011', {
+        if(this.state === null){
+            alert('请输入手机号');
+            return;
+        }else{
+            if(this.state.mobile === undefined || this.state.mobile === null){
+                alert('请输入手机号');
+                return;
+            }else if(this.state.password === undefined || this.state.password === null){
+                alert('请输入密码');
+                return;
+            }
+        }
+        var mobile = this.state.mobile;
+        var password = this.state.password;
+        fetch(`https://escrow.tourongjia.com/Mobile2/Auth/login?account=${mobile}&password=${password}&deviceid=${mobile}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -80,12 +94,14 @@ class Login extends Component {
                     <Image source={logo} style={styles.logoImg} resizeMode = 'contain'/>
                     <TextInput style={[styles.inputStyle,{marginTop: 20}]}
                                placeholder='请输入手机号码'
-                               clearButtonMode ='while-editing'/>
+                               clearButtonMode ='while-editing'
+                               onChangeText={(text)=>this.setState({mobile: text})}/>
                     {/*<View style={styles.viewStyle}></View>*/}
                     <TextInput style={[styles.inputStyle,{marginTop: 8}]}
-                               placeholder="登陆密码"
+                               placeholder="登录密码"
                                password = 'true'
-                               clearButtonMode ='while-editing'/>
+                               clearButtonMode ='while-editing'
+                               onChangeText={(text)=>this.setState({password: text})}/>
                     <View style={[style = styles.view1Style,{flexDirection: 'row'}]}>
                         <TouchableOpacity onPress={()=>this.register()}>
                             <Text style={{color: 'gray'}}>马上注册</Text>
